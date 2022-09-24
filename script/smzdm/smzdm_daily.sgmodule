@@ -1,0 +1,11 @@
+#!name=什么值得买
+#!desc=什么值得买每日自动签到
+#!system=ios
+#!from https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_daily.js
+
+[Script]
+什么值得买_每日签到 = script-path=https://appleooo.tk/script/smzdm/smzdm_daily.js,timeout=120,type=cron,cronexp=51 7 * * *
+什么值得买_获取cookie = script-path=https://appleooo.tk/script/smzdm/smzdm_daily.js,type=http-request,requires-body=false,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user\/?$
+
+[MITM]
+hostname = %APPEND% zhiyou.smzdm.com

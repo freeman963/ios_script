@@ -1,0 +1,10 @@
+#!name=微信
+#!desc=微信公众号去底部广告
+#!system=ios
+#!from https://github.com/NobyDa/Script/blob/master/QuantumultX/File/Wechat.js
+
+[Script]
+微信公众号广告 = script-path=https://appleooo.tk/script/wechat/wechat.js,type=http-response,requires-body=true,max-size=0,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
+
+[MITM]
+hostname = %APPEND% mp.weixin.qq.com

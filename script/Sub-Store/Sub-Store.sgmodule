@@ -1,0 +1,14 @@
+#!name=Sub-Store
+#!desc=高级订阅管理工具
+#!system=ios
+#!from https://github.com/sub-store-org/Sub-Store
+
+[MITM]
+hostname=%APPEND% sub.store
+
+[Script]
+Sub-StoreCore=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://appleooo.tk/script/Sub-Store/sub-store-1.min.js,requires-body=true,max-size=0,timeout=120,ability=http-client-policy
+
+Sub-StoreSimple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://appleooo.tk/script/Sub-Store/sub-store-0.min.js,max-size=0,requires-body=true
+
+Sub-StoreSync=type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://appleooo.tk/script/Sub-Store/cron-sync-artifacts.min.js

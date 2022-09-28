@@ -6,7 +6,7 @@ const smzdmMissionKey = "smzdm_mission";
 const smzdmLotteryKey = "smzdm_lottery";
 const smzdmSyncQinglongKey = "smzdm_sync_qinglong";
 const scriptName = "什么值得买";
-const clickFavArticleMaxTimes = 7; // 好文收藏次数
+const clickFavArticleMaxTimes = 5; // 好文收藏次数
 
 const $ = MagicJS(scriptName, "INFO");
 let currentCookie = "";

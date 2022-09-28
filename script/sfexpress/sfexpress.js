@@ -154,7 +154,6 @@ function showmsg() {
     await signDailyTasks()
     showmsg()
   }
-  $.done();
 })()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())

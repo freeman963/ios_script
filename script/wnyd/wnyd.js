@@ -24,6 +24,7 @@ function checkin() {
 
         obj.tradeEndTime = 1692698690000;
         body = JSON.stringify(obj);
+        $done({body});
     }else{
         await checkin();
     }

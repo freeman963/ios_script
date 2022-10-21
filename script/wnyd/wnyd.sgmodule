@@ -5,6 +5,7 @@
 
 [Script]
 蜗牛阅读 = script-path=https://appleooo.tk/script/wnyd/wnyd.js,type=http-response,requires-body=true,max-size=0,pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json
+tag = script-path=https://appleooo.tk/script/wnyd/wnyd.js,timeout=120,type=cron,cronexp=50 7 * * *
 
 [MITM]
 hostname = %APPEND% p.du.163.com

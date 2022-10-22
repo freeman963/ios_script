@@ -3,4 +3,4 @@
 #!system=ios
 
 [Script]
-联通签到 = script-path=https://appleooo.tk/script/checin/10010.js,type=cron,cronexp=50 7 * * *
+联通签到 = script-path=https://appleooo.tk/script/checkin/10010.js,type=cron,cronexp=50 7 * * *

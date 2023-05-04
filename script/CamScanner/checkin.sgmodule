@@ -1,0 +1,9 @@
+#!name=CamScanner
+#!desc=CamScanner解锁
+#!system=ios
+
+[Script]
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://appleooo.tk/script/CamScanner/CamScanner.js
+
+[MITM]
+hostname = %APPEND% ap*.intsig.net

@@ -1,6 +1,7 @@
 #!name=Skip Proxy Lists
 #!desc=跳过部分应用的代理检测
-#!url=https://raw.githubusercontent.com/mieqq/mieqq/master/skip-proxy-lists.sgmodule
+
+# https://raw.githubusercontent.com/mieqq/mieqq/master/skip-proxy-lists.sgmodule
 
 [General]
 

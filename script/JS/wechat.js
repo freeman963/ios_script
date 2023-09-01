@@ -1,4 +1,6 @@
 /*
+ * https://github.com/NobyDa/Script/blob/master/QuantumultX/File/Wechat.js
+
 微信 去除公众号文章底部广告
 
 ***************************

@@ -1,0 +1,12 @@
+#!name=获取cookie
+#!desc=cookie
+#!system=ios
+
+[Script]
+华住会 = type=http-request, script-path=https://appleooo.tk/script/JS/hzh.js,pattern=https:\/\/hweb-mbf\.huazhu\.com\/api\/signIn,requires-body=false
+美团买菜 = type=http-request, script-path=https://appleooo.tk/script/JS/meituan.cookie.js, pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?
+顺丰 = type=http-request, script-path=https://appleooo.tk/script/JS/sfexpress.js,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=true
+什么值得买 = type=http-request, script-path=https://appleooo.tk/script/JS/smzdm_daily.js,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$,requires-body=false
+
+[MITM]
+hostname = %APPEND% hweb-mbf.huazhu.com, mall.meituan.com, ccsp-egmas.sf-express.com, user-api.smzdm.com

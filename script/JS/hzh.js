@@ -1,4 +1,6 @@
 /*
+ * https://github.com/evilbutcher/Quantumult_X/blob/master/check_in/hzh/hzh.js
+
 【华住会】@evilbutcher
 
 【仓库地址】https://github.com/evilbutcher/Quantumult_X/tree/master（欢迎star🌟）

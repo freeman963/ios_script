@@ -1,4 +1,6 @@
 /*
+ * https://github.com/NobyDa/Script/blob/master/Surge/JS/CamScanner.js
+
 CamScanner 解锁部分高级特权
 
 ***************************

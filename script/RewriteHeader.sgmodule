@@ -1,0 +1,11 @@
+#!name=Header Rewrite
+#!desc=Header Rewrite
+#!system=ios
+
+[Script]
+微信公众号广告 = type=http-response,script-path=https://appleooo.tk/script/JS/wechat.js,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=true,max-size=0
+蜗牛阅读 = type=http-response,script-path=https://appleooo.tk/script/JS/wnyd.js,pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json,requires-body=true,max-size=0
+CamScanner = type=http-response,script-path=https://appleooo.tk/script/JS/CamScanner.js,script-path=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=true,max-size=0
+
+[MITM]
+hostname = %APPEND% mp.weixin.qq.com, p.du.163.com, ap*.intsig.net

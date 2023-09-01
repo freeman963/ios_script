@@ -1,0 +1,11 @@
+#!name=任务签到
+#!desc=定时任务
+#!system=ios
+
+[Script]
+# 联通 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/10010.js
+华住会 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/hzh.js
+美团买菜 = type=cron,cronexp=0 8,10 * * *, script-path=https://appleooo.tk/script/JS/meituan.js,script-update-interval=0, wake-system=1
+顺丰 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/sfexpress.js
+什么值得买 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/smzdm_daily.js,timeout=120
+蜗牛阅读 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/wnyd.js,timeout=120

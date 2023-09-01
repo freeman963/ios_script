@@ -1,3 +1,5 @@
+// https://github.com/blackmatrix7/ios_rule_script/blob/master/script/smzdm/smzdm_daily.js
+
 const AppGetCookieRegex = /^https?:\/\/user-api\.smzdm\.com\/checkin$/;
 const smzdmCookieKey = "smzdm_cookie";
 const smzdmCookieIdKey = "smzdm_cookie_id";

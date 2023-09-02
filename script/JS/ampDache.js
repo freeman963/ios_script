@@ -130,13 +130,13 @@ function getToken() {
             abc.sessionid = hed['Cookie'].split("sessionid=")[1].split(";")[0];
             if (abc.sessionid.length > 30){
                 $.setdata(JSON.stringify(abc), _key);
-                $.msg($.name, '从Cookie中获取签到sessionid成功🎉', $.toStr(abc));
+                $.msg($.name, '从Cookie中获取签到sessionid成功🎉', '');
             }
         } else if (hed.hasOwnProperty('cookie') && hed['cookie'].includes('sessionid=')) {
             abc.sessionid = hed['cookie'].split("sessionid=")[1].split(";")[0];
             if (abc.sessionid.length > 30){
                 $.setdata(JSON.stringify(abc), _key);
-                $.msg($.name, '从Cookie中获取签到sessionid成功🎉', $.toStr(abc));
+                $.msg($.name, '从Cookie中获取签到sessionid成功🎉', '');
             }
         }
     }

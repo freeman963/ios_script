@@ -138,7 +138,7 @@ function showmsg() {
     console.log(JSON.stringify(session))
 
     const oldsession = $.getjson($.KEY_login)
-    if (oldsession.headers.Cookie !== session.headers.Cookie){
+    if ((oldsession === undefined) || (oldsession.headers.Cookie !== session.headers.Cookie)){
       if ($.setdata(JSON.stringify(session), $.KEY_login)) {
         $.subt = `🎈获取Cookie成功`
       } else {
@@ -147,6 +147,7 @@ function showmsg() {
       $.msg($.name, $.subt, $.desc)
     }else{
       $.log("当前页面获取的Cookie与客户端存储的Cookie相同,无需更新");
+      $.msg($.name, "Cookie is the latest", $.desc)
     }
   } else {
     await loginapp()

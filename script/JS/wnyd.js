@@ -2,10 +2,62 @@
 
 const $ = new Env('网易读书')
 $.KEY_login = 'cfg_login_wnyd'
+$.KEY_agent = 'cfg_login_user_agent'
+
+const wnynurl = "https://du.163.com/activity/201907/activityCenter.json";
+
+function getWnydToken() {
+    if ($request.url.includes(wnynurl)) {
+        const session = {}
+        session.url = $request.url
+        session.headers = $request.headers
+        console.log(JSON.stringify(session))
+
+        const oldcookie = $.getdata($.KEY_login)
+        const newcookie = session.headers.Cookie
+
+        const old_xsrf = oldcookie.match(/_xsrf=([^;]+)/)
+        const new_xsrf = newcookie.match(/_xsrf=([^;]+)/)
+
+        if ((oldcookie === '') || (old_xsrf[1] !== new_xsrf[1])){
+          if ($.setdata(newcookie, $.KEY_login)) {
+            $.subt = `🎈获取Cookie成功`
+            const oldagent = $.getdata($.KEY_agent)
+            const newagent = session.headers["User-Agent"]
+            if (oldagent === '' || (oldagent !== newagent))
+            {
+                if ($.setdata(newagent, $.KEY_agent)) {
+                    $.subt = `🎈获取Cookie+agent成功`
+                }
+                else{
+                    $.subt = `🎈获取agent失败`
+                }
+            }
+
+          } else {
+            $.subt = `🎈获取Cookie失败`
+          }
+          $.msg($.name, $.subt, $.desc)
+        }else{
+          $.log("当前页面获取的Cookie与客户端存储的Cookie相同,无需更新");
+          $.msg($.name, "Cookie is the latest", $.desc)
+        }
+    }
+}
 
 function checkin() {
-    const myRequest = $.getjson($.KEY_login)
-    return $.http.post(myRequest).then((response) => {
+    const mycookie = $.getdata($.KEY_login)
+    const xsrf = mycookie.match(/_xsrf=([^;]+)/)[1]
+    return $.http.post({
+        url: 'https://du.163.com/activity/201907/activityCenter/sign.json',
+        body: `csrfToken=${xsrf}`,
+        headers: {
+            Accept: `application/json, text/plain, */*`,
+            "Content-Type": `application/x-www-form-urlencoded`,
+            Cookie: mycookie,
+            "User-Agent": `${$.getdata($.KEY_agent)}`
+        }
+    }).then((response) => {
         $.data = JSON.parse(response.body)
         if ($.data.code == 0)
         {
@@ -20,14 +72,18 @@ function checkin() {
 }
 
 !(async () => {
-    if (typeof $response !== "undefined") {
+    if ($.isRequest()) {
+        getWnydToken();
+    }
+    else if ( typeof $response !== "undefined" ) {
         var body = $response.body;
         var obj = JSON.parse(body);
 
         obj.tradeEndTime = 1748791045000;
         body = JSON.stringify(obj);
         $done({body});
-    }else{
+    }
+    else {
         await checkin();
     }
   })()

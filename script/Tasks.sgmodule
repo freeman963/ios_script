@@ -9,3 +9,4 @@
 顺丰 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/sfexpress.js
 什么值得买 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/smzdm_daily.js,timeout=120
 蜗牛阅读 = type=cron,cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/wnyd.js,timeout=120
+高德打车 = type=cron, cronexp=56 7 * * *, script-path=https://appleooo.tk/script/JS/ampDache.js, timeout=60, wake-system=1

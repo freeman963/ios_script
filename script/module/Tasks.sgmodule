@@ -1,0 +1,13 @@
+#!name=Tasks
+#!desc=task+checkin
+#!system=ios
+
+[Script]
+# 联通 = type=cron,cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/10010.js
+
+华住会 = type=cron,cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/hzh.js, wake-system=1
+美团买菜 = type=cron,cronexp=56 9,11 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/meituan.js
+顺丰 = type=cron,cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/sfexpress.js
+什么值得买 = type=cron,cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/smzdm_daily.js,timeout=120
+蜗牛阅读 = type=cron,cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/wnyd.js,timeout=120
+高德打车 = type=cron, cronexp=56 9 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/ampDache.js, timeout=60

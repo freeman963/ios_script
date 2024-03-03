@@ -50,9 +50,6 @@
 # ddg: DuckDuckGo 搜索
 # 无指令则转 google 搜索
 
-# https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Q-Search_All_in_one.sgmodule
-# 分割线——————————————————————————
-
 [URL Rewrite]
 # > 图片
 # gm   (Google图片)

@@ -10,7 +10,7 @@
 (^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
 
 [Rule]
-RULE-SET,https://appleooo.tk/script/tiktok/tiktok.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/freeman963/ios_script/main/script/tiktok/tiktok.list,PROXY
 
 [MITM]
 hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com

@@ -32,7 +32,7 @@ function loginweb() {
 function sign() {
   const signOpts = {
     url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage`,
-    body: `{"channelFrom": "SFAPP", "comeFrom": "vioin"}`,
+    body: `{"comeFrom": "vioin", "channelFrom": "SFAPP"}`,
     headers: {
       'Content-Type': 'application/json'
     }
@@ -75,9 +75,9 @@ async function signDailyTasks() {
 }
 
 function doTask(task) {
-  return $.http.get({
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/task/finishTask?id=${task.taskCode}`,
-    body: ``,
+  return $.http.post({
+    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask`,
+    body: `{"taskCode":"${task.taskCode}"}`,
     headers: {}
   })
 }
@@ -86,7 +86,7 @@ function getPoint(task) {
   return $.http
     .post({
       url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral',
-      body: `{"strategyId":${task.strategyId},"taskId":"${task.taskId}","taskCode":"${task.taskCode}"}`,
+      body: `{"strategyId":${task.strategyId},"taskId":"${task.taskId}","taskCode":"${task.taskCode}","channelType":"1"}`,
       headers: {
         'Content-Type': 'application/json'
       }
@@ -151,11 +151,11 @@ function showmsg() {
     }
   } else {
     await loginapp()
-    await $.wait('1000')
+    await $.wait('600')
     await loginweb()
-    await $.wait('1000')
+    await $.wait('500')
     await sign()
-    await $.wait('1000')
+    await $.wait('700')
     await signDailyTasks()
     showmsg()
   }

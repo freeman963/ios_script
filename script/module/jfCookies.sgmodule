@@ -1,0 +1,9 @@
+#!name=jfCookies
+#!desc=jfCookies
+#!system=ios
+
+[Script]
+jf = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jf_cookies.js, pattern=^https:\/\/api.m.jd.com\/api\?functionId=ConvertSuperLink, requires-body=false
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

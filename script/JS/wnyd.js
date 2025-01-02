@@ -79,7 +79,7 @@ function checkin() {
         var body = $response.body;
         var obj = JSON.parse(body);
 
-        obj.tradeEndTime = 1748791045000;
+        obj.tradeEndTime = 3723724800000;
         body = JSON.stringify(obj);
         $done({body});
     }

@@ -3,11 +3,12 @@
 #!system=ios
 
 [Script]
-华住会 = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/hzh.js,pattern=https:\/\/hweb-mbf\.huazhu\.com\/api\/signIn,requires-body=false
+华住会 = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/hzh.js,pattern=^https:\/\/appgw\.huazhu\.com\/game\/sign_header,requires-body=false
 美团买菜 = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/meituan.cookie.js, pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?
 顺丰 = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/sfexpress.js,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=true
 什么值得买 = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/smzdm_daily.js,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$,requires-body=false
 高德打车 = type=http-response, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/ampDache.js, pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query, requires-body=true, max-size=0, timeout=60
+jd = type=http-request, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd.cookies.js, pattern=^https:\/\/bean\.m\.jd\.com\/$, requires-body=false
 
 [MITM]
-hostname = %APPEND% hweb-mbf.huazhu.com, mall.meituan.com, ccsp-egmas.sf-express.com, user-api.smzdm.com, m5.amap.com
+hostname = %APPEND% appgw.huazhu.com, mall.meituan.com, ccsp-egmas.sf-express.com, user-api.smzdm.com, m5.amap.com, bean.m.jd.com

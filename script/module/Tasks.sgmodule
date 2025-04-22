@@ -8,7 +8,7 @@
 华住会 = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/hzh.js, wake-system=1
 美团买菜 = type=cron,cronexp=58 8,12 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/meituan.js
 顺丰 = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/sfexpress.js,timeout=120
-什么值得买 = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/smzdm_daily.js,timeout=120
+# 什么值得买 = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/smzdm_daily.js,timeout=120
 蜗牛阅读 = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/wnyd.js
 高德打车 = type=cron, cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/ampDache.js, timeout=60
 # ✈️✈️✈️ = type=cron,cronexp=58 8 * * *, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/Sub-info.js

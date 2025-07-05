@@ -4,8 +4,10 @@
 
 [Script]
 jdck = type=http-request, pattern=^https:\/\/bean\.m\.jd\.com\/$, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd_price.js, requires-body=false
-jd_price  = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd_price.js, requires-body=true, max-size=-1, timeout=60
+# jd_price  = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd_price.js, requires-body=true, max-size=-1, timeout=60
+jd_price  = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd_price.js, requires-body=true, max-size=-1, timeout=60
 manmanbuy = type=http-request, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/api\/config\/indexGuide$,script-path=https://raw.githubusercontent.com/freeman963/ios_script/main/script/JS/jd_price.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% bean.m.jd.com, api.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
+# hostname = %APPEND% bean.m.jd.com, api.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
+hostname = %APPEND% bean.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
